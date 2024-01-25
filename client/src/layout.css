@@ -1,0 +1,5 @@
+.main-container{
+    margin: 0;
+    background-image: url("./assests/bgHome.jpg");
+    background-size: cover;
+}
