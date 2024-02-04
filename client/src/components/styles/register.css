@@ -1,0 +1,13 @@
+.registerCard{
+    border: 1px solid black;
+    height: 500px;
+    width: 30%;
+    min-width: 400px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+}

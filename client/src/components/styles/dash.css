@@ -1,0 +1,214 @@
+:root {
+  --background-color: rgb(67, 51, 51);
+  --background-color-hover: rgb(74, 36, 36);
+}
+
+.dash-container {
+  color: white;
+  background-color: var(--background-color);
+  min-height: 94vh;
+  position: relative;
+}
+
+.sidebar {
+  width: 0;
+  height: 100%;
+  background-color: rgb(48, 39, 39);
+  transition: width 0.3s ease-in;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* gap: 1rem; */
+  /* padding: 1rem; */
+}
+
+.sidebar.visible {
+  width: 3vw;
+  min-width: 40px;
+}
+
+.side-icons {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.3px solid rgb(80, 64, 64);
+  transition: background-color 0.3s;
+}
+
+.side-icons:hover {
+  cursor: pointer;
+  background-color: rgb(74, 36, 36);
+}
+
+.side-icons > span {
+  font-size: 0.7rem;
+}
+
+.dash-content {
+  flex-grow: 1;
+  transition: margin-left 0.3s;
+}
+
+.dash-content.shifted {
+  margin-left: max(40px, 3vw);
+}
+
+.dash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 94vh;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.dash-c {
+  border-bottom: 1px solid black;
+}
+
+.addTasks {
+  height: 7%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.3rem;
+  padding: 0.4rem 1rem;
+}
+
+.taskList {
+  padding: 0.3rem 1rem;
+  /* border: 1px solid white; */
+}
+
+.task-object {
+  width: 100%;
+  display: flex;
+  padding: 0.4rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+  background-color: rgb(82, 60, 60);
+  /* box-shadow: 10px 10px 10px 10px rgb(82, 54, 54); */
+}
+
+.task-title {
+  color: rgb(255, 115, 0);
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.task-description {
+  color: rgb(161, 104, 57);
+  font-weight: lighter;
+  font-size: 0.9rem;
+}
+
+.addBtn {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  gap: 0.3rem;
+  padding: 0 0.5rem;
+}
+
+.addBtn:hover {
+  background-color: var(--background-color-hover);
+  cursor: pointer;
+}
+
+.addTask-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.5rem;
+  display: none;
+  position: absolute;
+  right: 1vw;
+  top: 8%;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  height: 30vh;
+  width: 35vw;
+  box-shadow: -1px 20px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), -20px -10px 26px rgba(0, 0, 0, 0.09),
+    20px -19px 15px rgba(0, 0, 0, 0.1), 0px 0px 100px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.add-task-box-open {
+  display: block;
+}
+
+.addtask-form {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  background-color: transparent;
+  padding: 0.3rem;
+}
+
+.addtask-form > input {
+  outline: 0;
+  border: 1px solid rgb(219, 213, 213);
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+}
+
+.addtask-form > textarea {
+  border-radius: 8px;
+  height: 70%;
+  width: 100%;
+  resize: none;
+  outline: 0;
+  padding: 8px 14px;
+  border: 1px solid rgb(219, 213, 213);
+  background-color: transparent;
+  overflow: visible;
+}
+
+.btns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  padding: 0.4rem;
+}
+
+.btns > button {
+  padding: 0.3rem 0.5rem;
+  background-color: rgb(134, 88, 88);
+  border-radius: 10px;
+}
+
+.btns > button:hover {
+  background-color: rgb(89, 58, 58);
+  cursor: pointer;
+}
+
+.btns > button.btn-disabled:hover {
+  cursor: not-allowed;
+}
+
+.catagory-row {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.2rem 0.3rem;
+  border-bottom: 0.4px solid rgb(52, 35, 35);
+}
+
+.taskList {
+  height: 93%;
+  width: 100%;
+}
